@@ -36,6 +36,8 @@ namespace GameSix
                 Console.WriteLine(" Foe " + (i + 1) + ": " + foes[i].GetName() + " has " +
                 foes[i].GetHealth() + " health and " + foes[i].GetShield() + " shield.");
             }
+
+            Console.WriteLine("Obrigado por ter usado este pograma!");
         }
     }
 }
