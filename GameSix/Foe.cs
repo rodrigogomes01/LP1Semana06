@@ -26,10 +26,19 @@ namespace GameSix
         {
             return name;
         }
-        
+
         {
         private static int NumberofPowerUps;
             NumberofPowerUps = 0;
+        }
+        
+        {
+            NumberofPowerUps++;
+        }
+
+        public static int GetNumberOfPowerUps()
+        {
+            return numberOfPowerUps;
         }
             
         //Change the name of the enemy
