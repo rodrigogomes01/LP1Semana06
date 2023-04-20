@@ -6,6 +6,7 @@ namespace GameSix
         private string name;
         private float health;
         private float shield;
+
         //Constructor
         public Foe(string name)
         {
@@ -25,6 +26,12 @@ namespace GameSix
         {
             return name;
         }
+        
+        {
+        private static int NumberofPowerUps;
+            NumberofPowerUps = 0;
+        }
+            
         //Change the name of the enemy
         public void SetName(string name)
         {
