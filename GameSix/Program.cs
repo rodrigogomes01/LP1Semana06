@@ -9,6 +9,9 @@ namespace GameSix
             //Ask user for the number of foes
             Console.Write("How many foes? ");
             int FoesAvailable = int.Parse(Console.ReadLine());
+
+            //Sort foes in an array
+            Foe[] foes = new Foe[FoesAvailable];
         }
     }
 }
