@@ -12,6 +12,14 @@ namespace GameSix
 
             //Sort foes in an array
             Foe[] foes = new Foe[FoesAvailable];
+
+            //Ask the user for each foe's name
+            for (int i = 0; i < FoesAvailable; i++)
+            {
+                Console.Write("Foe name " + (i + 1) + ": ");
+                string name = Console.ReadLine();
+                foes[i] = new Foe(name);
+            }
         }
     }
 }
