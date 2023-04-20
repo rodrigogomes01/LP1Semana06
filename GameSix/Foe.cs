@@ -30,6 +30,15 @@ namespace GameSix
             return name;
         }
 
+        //Change the name of the enemy
+        public void SetName(string name)
+        {
+            //Get the name without spaces and remove them
+            this.name = name;
+            name = name.Trim();
+        }
+
+
         public void TakeDamage(float damage)
         {
             shield -= damage;
