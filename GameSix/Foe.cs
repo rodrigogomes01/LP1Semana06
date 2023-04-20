@@ -1,5 +1,4 @@
 using System;
-
 namespace GameSix
 {
     public class Foe
@@ -7,7 +6,6 @@ namespace GameSix
         private string name;
         private float health;
         private float shield;
-
         //Constructor
         public Foe(string name)
         {
@@ -19,17 +17,14 @@ namespace GameSix
         {
             return name;
         }
-
         public string GetShield()
         {
             return name;
         }
-
         public string GetHealth()
         {
             return name;
         }
-
         //Change the name of the enemy
         public void SetName(string name)
         {
@@ -37,8 +32,6 @@ namespace GameSix
             this.name = name;
             name = name.Trim();
         }
-
-
         public void TakeDamage(float damage)
         {
             shield -= damage;
@@ -48,6 +41,19 @@ namespace GameSix
                 shield = 0;
                 health -= damageStillToInflict;
                 if (health < 0) health = 0;
+            }
+        }
+        public void PickupPowerUp(PowerUp power_up, float amount)
+        {
+            if (power_up == PowerUp.Health)
+            {
+                health += amount;
+                if (health > 100) health = 100;
+            }
+            else if (power_up == PowerUp.Shield)
+            {
+                shield += amount;
+                if (shield > 100) shield = 100;
             }
         }
     }
