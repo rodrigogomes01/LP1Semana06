@@ -37,10 +37,14 @@ namespace GameSix
                 foes[i].GetHealth() + " health and " + foes[i].GetShield() + " shield.");
             }
 
+<<<<<<< HEAD
             // Print the power up count
             Console.WriteLine("Number of power ups: " + Foe.GetNumberOfPowerUps());
 
             Console.WriteLine("Merci d’utiliser ce programme!");
+=======
+            Console.WriteLine("Obrigado por ter usado este pograma!");
+>>>>>>> 4e78279da843b0dd76694cf0f72b6070c0bf3c56
         }
     }
 }
