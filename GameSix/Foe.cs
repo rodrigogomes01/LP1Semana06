@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace GameSix
+namespace GameSixFriday
 {
     public class Foe
     {
@@ -11,12 +11,15 @@ namespace GameSix
         private float health;
         private float shield;
 
+        private static int NumberOfPowerUps;
+
         //Constructor
         public Foe(string name)
         {
             this.name = name;
             health = 100;
             shield = 0;
+            NumberOfPowerUps = 0;
         }
         public string GetName()
         {
@@ -31,18 +34,9 @@ namespace GameSix
             return name;
         }
 
-        {
-        private static int NumberOfPowerUps;
-            NumberOfPowerUps = 0;
-        }
-
-        {
-            NumberOfPowerUps++;
-        }
-
         public static int GetNumberofPowerUps()
         {
-            return numberofPowerUps;
+            return NumberOfPowerUps;
         }
             
         //Change the name of the enemy
