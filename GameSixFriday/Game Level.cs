@@ -15,5 +15,10 @@ namespace GameSixFriday
             this.Rooms = Rooms;
             this.Challenge = Challenge;
         }
+
+            public void SetFoeInRoom(int room, Foe foe)
+        {
+            Foes[room] = foe;
+        }
     }
 }
