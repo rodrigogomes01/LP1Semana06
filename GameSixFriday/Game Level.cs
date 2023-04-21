@@ -14,11 +14,32 @@ namespace GameSixFriday
         {
             this.Rooms = Rooms;
             this.Challenge = Challenge;
+            Room_Foes = new Foe[Rooms];
         }
 
             public void SetFoeInRoom(int room, Foe foe)
         {
-            Foes[room] = foe;
+            FoesInRoom[room - 1] = foe;
+        }
+
+        public Difficulty GetDifficulty()
+        {
+            return Challenge;
+        }
+
+        public int GetRooms()
+        {
+            return Rooms;
+        }
+
+        public int GetFoes()
+        {
+            int Num_Foes = 0;
+            for (int i = 0; i < Room_Foes.Length; i++)
+            {
+                if (Room_Foes[i] != null) Num_Foes++;
+            }
+            return Num_Foes;
         }
     }
 }
