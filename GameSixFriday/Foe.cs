@@ -11,12 +11,15 @@ namespace GameSixFriday
         private float health;
         private float shield;
 
+        private static int NumberOfPowerUps;
+
         //Constructor
         public Foe(string name)
         {
             this.name = name;
             health = 100;
             shield = 0;
+            NumberOfPowerUps = 0;
         }
         public string GetName()
         {
@@ -29,15 +32,6 @@ namespace GameSixFriday
         public string GetHealth()
         {
             return name;
-        }
-
-        {
-        private static int NumberOfPowerUps;
-            NumberOfPowerUps = 0;
-        }
-
-        {
-            NumberOfPowerUps++;
         }
 
         public static int GetNumberofPowerUps()
