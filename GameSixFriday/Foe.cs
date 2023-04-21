@@ -42,7 +42,7 @@ namespace GameSixFriday
 
         public static int GetNumberofPowerUps()
         {
-            return numberofPowerUps;
+            return NumberOfPowerUps;
         }
             
         //Change the name of the enemy
