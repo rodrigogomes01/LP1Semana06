@@ -27,12 +27,12 @@ namespace GameSixFriday
             return challenge;
         }
 
-        public int Getrooms()
+        public int GetNumRooms()
         {
             return Room_Foes.Length;
         }
 
-        public int GetFoes()
+        public int GetNumFoes()
         {
             int Num_Foes = 0;
             for (int i = 0; i < Room_Foes.Length; i++)
