@@ -7,29 +7,29 @@ namespace GameSixFriday
 {
     public class GameLevel
     {
-        private int Rooms;
-        private Difficulty Challenge;
+        private Difficulty challenge;
+        private int Num_Foes;
+        Foe[] Room_Foes;
 
-        public GameLevel(int Rooms, Difficulty Challenge)
+        public GameLevel(int rooms, Difficulty challenge)
         {
-            this.Rooms = Rooms;
-            this.Challenge = Challenge;
-            Room_Foes = new Foe[Rooms];
+            this.challenge = challenge;
+            Room_Foes = new Foe[rooms];
         }
 
-            public void SetFoeInRoom(int room, Foe foe)
+        public void SetFoeInRoom(int room, Foe foe)
         {
-            FoesInRoom[room - 1] = foe;
+            Room_Foes[room - 1] = foe;
         }
 
         public Difficulty GetDifficulty()
         {
-            return Challenge;
+            return challenge;
         }
 
-        public int GetRooms()
+        public int Getrooms()
         {
-            return Rooms;
+            return Room_Foes.Length;
         }
 
         public int GetFoes()
@@ -40,6 +40,17 @@ namespace GameSixFriday
                 if (Room_Foes[i] != null) Num_Foes++;
             }
             return Num_Foes;
+        }
+
+        public void PrintFoes()
+        {
+            for (int i = 0; i < Room_Foes.Length; i++)
+            {
+                if (Room_Foes[i] != null)
+                {
+                    Console.WriteLine($"Room {i + 1}: {Room_Foes[i].GetName()}");
+                }
+            }
         }
     }
 }
